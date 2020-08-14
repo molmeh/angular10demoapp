@@ -1,0 +1,27 @@
+<div>
+    <h1>EDIT EMPLOYEE - <span class="text-success">{{employee.name | uppercase}}</span></h1>
+  </div>
+  <div class="container">
+    <div class="form-row">
+    <div class="form-group col-md-6">
+        <label for="emp_id" class="f-l">Employee ID <span class="text-red">*</span></label>
+        <input type="number" class="form-control" [(ngModel)]="employee.id" id="emp_id" placeholder="Enter Employee ID" disabled>
+    </div>
+    <div class="form-group col-md-6">
+        <label for="emp_name" class="f-l">Name</label>
+        <input type="text" class="form-control" [(ngModel)]="employee.name" id="emp_name" placeholder="Enter Employee Name">
+    </div>
+    </div>
+    <div class="form-row">
+    <div class="form-group col-md-6">
+        <label for="emp_department" class="f-l">Department</label>
+        <input type="text" class="form-control" [(ngModel)]="employee.department" id="emp_department" placeholder="Enter Employee Department">
+    </div>
+    <div class="form-group col-md-6">
+        <label for="emp_salary" class="f-l">Salary</label>
+        <input type="number" class="form-control" [(ngModel)]="employee.salary" id="emp_salary" placeholder="Enter Employee Salary">
+    </div>
+    </div>
+    <button type="submit" class="btn btn-success" (click)="editEmployee(employee)">Edit</button>&nbsp;&nbsp;
+    <button class="btn btn-danger" routerLink="/employee">Cancel</button>
+</div>
